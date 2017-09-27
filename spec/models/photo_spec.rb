@@ -7,4 +7,7 @@ RSpec.describe Photo, type: :model do
       title: 'You wish you were me'
     )
   end
+
+  it { is_expected.to validate_presence_of(:url) }
+  it { is_expected.to validate_presence_of(:title) }
 end
