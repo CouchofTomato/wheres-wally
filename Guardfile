@@ -69,7 +69,7 @@ guard :rspec, cmd: "spring rspec --color --format documentation", all_on_start: 
   end
 end
 
-guard :rubocop, all_on_start: false, cli: %w(--format fuubar --format html -o ./tmp/rubocop_results.html), launchy: './tmp/rubocop_results.html' do
+guard :rubocop, all_on_start: false, cli: ['--format', 'clang', '--rails'] do
   watch(%r{.+\.rb$})
   watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
 end
