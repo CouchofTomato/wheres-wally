@@ -47,6 +47,7 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.8.0'
   gem 'guard-rspec', '~> 4.7.3'
   gem 'spring-commands-rspec', '~> 1.0.4'
+  gem 'shoulda-matchers', '~> 3.1.2'
 end
 
 group :development do
