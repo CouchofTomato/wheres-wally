@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Score, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject(:score) { build(:score) }
+  
+  it { is_expected.to validate_presence_of(:time) }
+  it { is_expected.to validate_presence_of(:name) }
+  it { is_expected.to validate_presence_of(:photo) }
 end

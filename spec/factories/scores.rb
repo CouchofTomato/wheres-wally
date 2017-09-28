@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :score do
-    photo nil
+    association :photo
     name "MyString"
     time 1
   end
