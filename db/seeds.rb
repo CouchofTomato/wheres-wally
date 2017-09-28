@@ -10,3 +10,11 @@ Photo.create(
   ]
 )
 
+Character.create(
+  [ {name: 'Waldo'},
+    {name: 'Wizard Whitebeard'},
+    {name: 'Wenda'},
+    {name: 'Odlaw'},
+    {name: 'Woof'}
+  ]
+)
