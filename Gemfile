@@ -48,6 +48,7 @@ group :development, :test do
   gem 'guard-rspec', '~> 4.7.3'
   gem 'spring-commands-rspec', '~> 1.0.4'
   gem 'shoulda-matchers', '~> 3.1.2'
+  gem 'rails-controller-testing', '~> 1.0.2'
 end
 
 group :development do
