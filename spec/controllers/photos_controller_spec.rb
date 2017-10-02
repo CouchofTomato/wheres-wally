@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe PhotosController, type: :controller do
   let(:photo) { double 'Photo' }
   let(:all_photos) { ['photo1', 'photo2'] }
-  let(:params) { '2' }
+  let(:params) { { id: '2' } }
 
   describe 'GET #index' do
     it 'returns http success' do
@@ -29,17 +29,17 @@ RSpec.describe PhotosController, type: :controller do
     end
     
     it 'returns http success' do
-      get :show
+      get :show, params: params
       expect(response).to have_http_status(:success)
     end
     
     it 'renders the show template' do
-      get :show
+      get :show, params: params
       expect(response).to render_template :show
     end
     
     it 'assigns the requested photo to @photo' do
-      get :show
+      get :show, params: params
       expect(assigns(:photo)).to eq photo
     end
   end
