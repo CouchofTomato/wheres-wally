@@ -1,7 +1,7 @@
 # controller to render the photos required for the game
 class PhotosController < ApplicationController
   def index
-    @photos = Photo.all
+    @photos = Photo.joins(:scores)
   end
 
   def show
