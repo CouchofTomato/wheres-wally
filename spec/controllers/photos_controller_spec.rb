@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe PhotosController, type: :controller do
-  let(:photos) { double 'Photos' }
+  let(:photo) { double 'Photo' }
+  let(:all_photos) { ['photo1', 'photo2'] }
+  let(:params) { '2' }
 
   describe 'GET #index' do
     it 'returns http success' do
@@ -13,12 +15,32 @@ RSpec.describe PhotosController, type: :controller do
       get :index
       expect(response).to render_template :index
     end
+
+    it 'populates an array for all photos' do
+      allow(Photo).to receive(:all).and_return(all_photos)
+      get :index
+      expect(assigns(:photos)).to match_array(['photo1', 'photo2'])
+    end
   end
 
   describe 'GET #show' do
+    before(:each) do
+      allow(Photo).to receive(:find).and_return(photo)
+    end
+    
     it 'returns http success' do
       get :show
       expect(response).to have_http_status(:success)
+    end
+    
+    it 'renders the show template' do
+      get :show
+      expect(response).to render_template :show
+    end
+    
+    it 'assigns the requested photo to @photo' do
+      get :show
+      expect(assigns(:photo)).to eq photo
     end
   end
 end

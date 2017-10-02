@@ -1,9 +1,10 @@
+# controller to render the photos required for the game
 class PhotosController < ApplicationController
   def index
-    @photo = Photo.all
+    @photos = Photo.all
   end
 
   def show
-    
+    @photo = Photo.find(params[:id]) 
   end
 end
