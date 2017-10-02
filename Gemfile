@@ -60,6 +60,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'guard-rubocop', '~> 1.3.0'
   gem 'guard-reek', '~> 1.2.0'
+  gem 'bullet', '~> 5.6.1'
 end
 
 group :test do
