@@ -17,7 +17,7 @@ RSpec.describe PhotosController, type: :controller do
     end
 
     it 'populates an array for all photos' do
-      allow(Photo).to receive(:joins).and_return(all_photos)
+      allow(Photo).to receive(:all).and_return(all_photos)
       get :index
       expect(assigns(:photos)).to match_array(%w[photo1 photo2])
     end
@@ -26,8 +26,6 @@ RSpec.describe PhotosController, type: :controller do
   describe 'GET #show' do
     before(:each) do
       allow(Photo).to receive(:find).and_return(photo)
-      allow(photo).to receive(:joins)
-        .with(:scores, :photos_characters, :photos).and_return(photo)
     end
 
     it 'returns http success' do
