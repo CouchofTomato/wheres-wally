@@ -4,6 +4,7 @@ RSpec.describe PhotosController, type: :controller do
   let(:photo) { double 'Photo' }
   let(:all_photos) { %w[photo1 photo2] }
   let(:params) { { id: '2' } }
+  let(:time) { Time.zone.now }
 
   describe 'GET #index' do
     it 'returns http success' do
@@ -41,6 +42,12 @@ RSpec.describe PhotosController, type: :controller do
     it 'assigns the requested photo to @photo' do
       get :show, params: params
       expect(assigns(:photo)).to eq photo
+    end
+
+    it 'assigns the current time to @time' do
+      allow(Time).to receive(:now).and_return(time)
+      get :show, params: params
+      expect(assigns(:start_time)).to eql time
     end
   end
 end
