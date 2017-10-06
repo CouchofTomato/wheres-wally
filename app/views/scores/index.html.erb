@@ -1,2 +1,14 @@
-<h1>Scores#index</h1>
-<p>Find me in app/views/scores/index.html.erb</p>
+<h1>High Scores for <%= @photo.title %></h1>
+<table>
+  <th>
+    <td>Name</td>
+    <td>Time</td>
+  </th>
+  <% @scores.each do |score| %>
+    <tr>
+      <td><%= score.name %></td>
+      <td><%= score.time %></td>
+    </tr>
+  <% end %>
+</table>
+

@@ -4,15 +4,15 @@ RSpec.describe ScoresController, type: :controller do
   let(:photo) { double 'Photo' }
   let(:score) { double 'Score' }
   let(:scores) { [1, 2, 3] }
-  let(:params) { { id: '2',  photo_id: photo } }
+  let(:params) { { id: '2', photo_id: photo } }
 
   before(:each) do
     allow(Photo).to receive(:find).and_return(photo)
     allow(photo).to receive(:scores).and_return(scores)
   end
 
-  describe "GET #index" do
-    it "returns http success" do
+  describe 'GET #index' do
+    it 'returns http success' do
       get :index, params: params
       expect(response).to have_http_status(:success)
     end
@@ -29,8 +29,6 @@ RSpec.describe ScoresController, type: :controller do
   end
 
   describe '#create' do
-    it 'creates a new score for the photo' do
-      post :create, params: params
-    end
+    it 'creates a new score for the photo'
   end
 end
