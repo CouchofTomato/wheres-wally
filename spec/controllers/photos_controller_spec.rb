@@ -5,6 +5,7 @@ RSpec.describe PhotosController, type: :controller do
   let(:all_photos) { %w[photo1 photo2] }
   let(:params) { { id: '2' } }
   let(:time) { Time.zone.now }
+  let(:decorated_characters) { double 'CharacterDecorator' }
 
   describe 'GET #index' do
     it 'returns http success' do
@@ -48,6 +49,12 @@ RSpec.describe PhotosController, type: :controller do
       allow(Time).to receive(:now).and_return(time)
       get :show, params: params
       expect(assigns(:start_time)).to eql time
+    end
+    
+    it 'assigns a characters decorator to @characters' do
+      allow(controller).to receive(:decorated_characters).and_return(decorated_characters)
+      get :show, params: params
+      expect(assigns(:characters)).to eql decorated_characters
     end
   end
 end
