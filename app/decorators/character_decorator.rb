@@ -2,6 +2,6 @@ require 'delegate'
 
 class CharacterDecorator < SimpleDelegator
   def name
-    Character.find(character_id).name
+    character.name
   end
 end
