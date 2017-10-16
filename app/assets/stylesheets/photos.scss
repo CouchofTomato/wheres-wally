@@ -2,12 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.photo {
-    display: flex;
-    justify-content: center
+h1 {
+    font-size: 3vh
+}
+
+.title, .characters {
+    display: inline-block;
 }
 
 .photo img {
+    height: 80vh;
     width: 95vw;
-    height: 85vh;
+}
+
+.characters img {
+    width: 3vw;
+    height: 10vh;
+}
+
+.hor-center-flex {
+    display: flex;
+    justify-content: center  
 }

@@ -1,4 +1,18 @@
-<h1><%= @photo.title %></h1>
-<div class="photo">
-  <%= image_tag(@photo.url, alt: @photo.title) %>
+<div class="header">
+  <div class="title">
+    <h1><%= @photo.title %></h1>
+  </div>
+  <div class="characters">
+    <%= image_tag('waldo', alt: 'Picture of Waldo', class: 'character') %>
+    <%= image_tag('wenda', alt: 'Picture of Wenda', class: 'character') %>
+    <%= image_tag('whitebeard', alt: 'Picture of Wizard Whitebeard', class: 'character') %>
+    <%= image_tag('odlaw', alt: 'Picture of Odlaw', class: 'character') %>
+  </div>
 </div>
+
+<div class="display">
+  <div class="photo hor-center-flex">
+    <%= image_tag(@photo.url, alt: @photo.title) %>
+  </div>
+</div>
+
