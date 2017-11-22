@@ -2,8 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1 {
-    font-size: 3vh
+.index {
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(230, 126, 126, 1), rgba(230, 126, 126, 1) 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1));
+    background-size: 100% 150px;
+}
+
+#index-headings > h1 {
+    font-size: 8vh
+}
+
+#index-headings >h3 {
+    font-size: 5vh;
 }
 
 .title, .characters {
@@ -106,4 +117,21 @@ h1 {
    bottom: 0;
    background-color: black;
    opacity: 0.9;
+}
+
+#photo-image {
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 1px 1px 5px #555 inset;
+    background: white;
+}
+
+#index-headings {
+    text-align: center;
+}
+
+#photo-select {
+    display: flex;
+    justify-content: space-around;
 }

@@ -1,11 +1,16 @@
-<h1>Waldo App</h1>
-<h3>Select a map and find Waldo and his friends</h3>
+<div id="index-headings">
+  <h1>Waldo App</h1>
+  <h3>Select a map and find Waldo and his friends</h3>
+</div>
 
-<% @photos.each do |photo| %>
-  <div>
-    <%= link_to image_tag(small_image_version(photo.url), size: "160x100", alt: photo.title), photo %>
-    <h5><%= photo.title %></h5>
-    <h6><%= link_to "View High Scores", photo_scores_path(photo) %></h6>
-  </div>
-<% end %>
+<div id="photo-select">
+  <% @photos.each do |photo| %>
+    <div id="photo-image">
+      <%= link_to image_tag(small_image_version(photo.url), size: "160x100", alt: photo.title), photo %>
+      <h5><%= photo.title %></h5>
+      <h6><%= link_to "View High Scores", photo_scores_path(photo) %></h6>
+    </div>
+  <% end %>
+</div>
+
   
