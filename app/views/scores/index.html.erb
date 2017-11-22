@@ -1,14 +1,25 @@
-<h1>High Scores for <%= @photo.title %></h1>
-<table>
-  <th>
-    <td>Name</td>
-    <td>Time</td>
-  </th>
-  <% @scores.each do |score| %>
-    <tr>
-      <td><%= score.name %></td>
-      <td><%= score.time %></td>
-    </tr>
-  <% end %>
-</table>
+<div id="container">
+  <div id="header" class="center-align">
+    <h1>High Scores for <%= @photo.title %></h1>
+  </div>
+  <div id="table-div" class="center-align">
+    <table id="score-table">
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+      </tr>
+      <% @scores.each do |score| %>
+        <tr>
+          <td><%= score.name %></td>
+          <td><%= convert_seconds_to_time(score.time) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+<div id="links" class="center-align">
+  <%= link_to "Home", root_path %>
+</div>
+
+
 

@@ -3,16 +3,24 @@
     <h1><%= @photo.title %></h1>
   </div>
   <div class="characters">
-    <%= image_tag('waldo', alt: 'Picture of Waldo', class: 'character') %>
-    <%= image_tag('wenda', alt: 'Picture of Wenda', class: 'character') %>
-    <%= image_tag('whitebeard', alt: 'Picture of Wizard Whitebeard', class: 'character') %>
-    <%= image_tag('odlaw', alt: 'Picture of Odlaw', class: 'character') %>
+    <%= image_tag('waldo', alt: 'Picture of Waldo', class: 'character', id: 'Waldo') %>
+    <%= image_tag('wenda', alt: 'Picture of Wenda', class: 'character', id: 'Wenda') %>
+    <%= image_tag('whitebeard', alt: 'Picture of Wizard Whitebeard', class: 'character', id: 'Wizard Whitebeard') %>
+    <%= image_tag('odlaw', alt: 'Picture of Odlaw', class: 'character', id: 'Odlaw') %>
   </div>
 </div>
 
 <div class="display">
   <div class="photo hor-center-flex">
-    <%= image_tag(@photo.url, alt: @photo.title) %>
+    <%= image_tag(@photo.url, alt: @photo.title, id: 'photo') %>
   </div>
 </div>
 
+<div id="scoreForm"></div>
+
+<%= content_tag :div, id: "characterInfo", data: {characters: @characters} do %>
+<% end %>
+<%= content_tag :div, id: "timeFactor", data: {time: @start_time} do %>
+<% end %>
+<%= content_tag :div, id: "photoID", data: {id: @photo.id} do %>
+<% end %>

@@ -26,7 +26,7 @@ PhotosCharacter.create(photo: photo, character: character, top_x: 132, top_y: 29
 character = Character.find_by(name: 'Wenda')
 PhotosCharacter.create(photo: photo, character: character, top_x: 1118, top_y: 347, bottom_x: 1132, bottom_y: 366)
 character = Character.find_by(name: 'Wizard Whitebeard')
-PhotosCharacter.create(photo: photo, character: character, top_x: 373, top_y: 392, bottom_x: 388, bottom_y: 327)
+PhotosCharacter.create(photo: photo, character: character, top_x: 373, top_y: 292, bottom_x: 388, bottom_y: 327)
 
 # department store
 photo = Photo.find_by(title: 'Department Store')

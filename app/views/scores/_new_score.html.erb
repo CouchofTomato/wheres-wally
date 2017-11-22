@@ -1,0 +1,11 @@
+<div id="background-dim"></div>
+<div id="new_score_form_div">
+  <h3>Congratulations!</h3>
+  <p>You completed the game in <%= convert_seconds_to_time(time)%></p>
+  <%= form_with model: score, url: [photo, score], id: :new_score_form, local: true do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.hidden_field :time, value: time %>
+    <%= f.submit "submit" %>
+  <% end %>
+</div>
