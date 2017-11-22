@@ -91,7 +91,7 @@ const characterClick = (e) => {
       success: function(data) {
       },
       error: function(error) {
-        console.log("error")
+        
       }
     })
   }
