@@ -89,8 +89,6 @@ const characterClick = (e) => {
       data: `time=${time}`,
       dataType: 'script',
       success: function(data) {
-        const form = document.getElementById('new_score_form')
-        form.style.opacity = 1
       },
       error: function(error) {
         console.log("error")
