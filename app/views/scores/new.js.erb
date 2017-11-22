@@ -1,2 +1,2 @@
-let page = document.getElementById('scoreForm')
+var page = document.getElementById('scoreForm')
 page.innerHTML = "<%= j(render(partial: 'scores/new_score', locals: {score: @score, photo: @photo, time: @total_time})) %>"
