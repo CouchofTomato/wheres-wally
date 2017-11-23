@@ -1,0 +1,205 @@
+/* line 5, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.index {
+  margin: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, #e67e7e, #e67e7e 50%, white 50%, white);
+  background-size: 100% 150px;
+}
+
+/* line 12, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+#index-headings > h1 {
+  font-size: 8vh;
+}
+
+/* line 16, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+#index-headings > h3 {
+  font-size: 5vh;
+}
+
+/* line 20, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.title, .characters {
+  display: inline-block;
+}
+
+/* line 24, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.photo {
+  position: relative;
+}
+
+/* line 28, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.photo img {
+  height: 80vh;
+  width: 95vw;
+}
+
+/* line 33, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.response {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 20px;
+  z-index: 999;
+  font-weight: 700;
+  font-size: 1em;
+  background: #ff0300;
+  color: white;
+}
+
+/* line 54, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.characters img {
+  width: 3vw;
+  height: 10vh;
+}
+
+/* line 59, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.hor-center-flex {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 64, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.modal {
+  width: auto;
+  height: auto;
+  position: absolute;
+}
+
+/* line 70, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.modal ul {
+  list-style: none;
+  margin: 0;
+}
+
+/* line 75, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.modal ul:first-child {
+  padding-top: 5px;
+}
+
+/* line 79, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.modal ul:last-child {
+  padding-bottom: 5px;
+}
+
+/* line 83, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.modal ul li {
+  background: #ff0300;
+  color: white;
+  padding: 5px;
+}
+
+/* line 89, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.modal ul li:hover {
+  cursor: pointer;
+  background: white;
+  color: #ff0300;
+}
+
+/* line 95, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.hidden {
+  visibility: hidden;
+}
+
+/* line 99, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+#new_score_form_div {
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 220px;
+  z-index: 999;
+  background: white;
+  margin-top: -110px;
+  margin-left: -150px;
+}
+
+/* line 112, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+#background-dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.9;
+}
+
+/* line 122, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+#photo-image {
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 1px 1px 5px #555 inset;
+  background: white;
+}
+
+/* line 130, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+#index-headings {
+  text-align: center;
+}
+
+/* line 134, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+#photo-select {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* line 139, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+.home-link {
+  float: right;
+}
+
+/* line 143, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/photos.scss */
+#links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px;
+  font-size: 1.5em;
+}
+/* line 5, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/scores.scss */
+td {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 10, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/scores.scss */
+#score-table {
+  text-align: center;
+}
+
+/* line 14, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/scores.scss */
+.center-align {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 19, /home/ubuntu/workspace/wallyapp/app/assets/stylesheets/scores.scss */
+#links {
+  padding-top: 20px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
