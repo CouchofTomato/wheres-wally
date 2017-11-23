@@ -1,24 +1,9 @@
-# README
+Project taken from The Odin Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://www.theodinproject.com/courses/javascript-and-jquery/lessons/where-s-waldo-a-photo-tagging-app
 
-Things you may want to cover:
+Join me and learn to code.
 
-* Ruby version
+A rails app using webpacker and yarn based on the popular Where's Waldo / Wally books.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+See a working example here https://couch-waldo.herokuapp.com/
