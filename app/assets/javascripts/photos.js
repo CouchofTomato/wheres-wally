@@ -4,6 +4,7 @@ let photo
 let naturalWidth
 let naturalHeight
 let characters
+
 const responseMessage = document.createElement('div')
 responseMessage.classList.add('response')
 responseMessage.classList.add('hidden')
@@ -89,6 +90,8 @@ const characterClick = (e) => {
       data: `time=${time}`,
       dataType: 'script',
       success: function(data) {
+        let theForm = document.getElementById('scoreForm')
+        theForm.innerHTML = eval(data)
       },
       error: function(error) {
         
